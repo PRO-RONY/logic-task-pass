@@ -1,1 +1,45 @@
 
+1/Write a method that will remove any given character from a String? 
+sol/
+st = "ALI!"
+c=input("enter the char to remove")
+s2 =st.replace(c,"")
+print(s2)
+--------------------------------------------
+Q2/Write a program to find all prime numbers up to a given range 
+of numbers? 
+sol/
+
+lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
+upper_value = int(input ("Please, Enter the Upper Range Value: "))  
+  
+print ("The Prime Numbers in the range are: ")  
+for number in range (lower_value, upper_value + 1):  
+    if number > 1:  
+        for i in range (2, number):  
+            if (number % i) == 0:  
+                break  
+        else:  
+            print (number)
+-------------------------------------------
+Q3/write a function that count how many the given character repeated 
+in a given string?
+
+sol/
+def my_function(string):
+    
+    for i in range(0, len(string)): 
+        
+        count = 1;  
+        for j in range(i+1, len(string)):  
+            if(string[i] == string[j] and string[i] != ' '):  
+                
+                count = count + 1;  
+                string = string[:j] + '0' + string[j+1:];  
+    
+        if(count > 1 and string[i] != '0'):  
+           print(string[i]," - ",count);
+
+
+s='ali abd alhmza'
+my_function(s)
